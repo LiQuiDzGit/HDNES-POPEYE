@@ -1,6 +1,3 @@
-<h3 align="center">
-Popeye Mesen2 HD Pack <br>
-<br></h3>
 
 h3 {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -8,6 +5,10 @@ h3 {
 	color: #6600FF;
 	text-align: center;
 }
+
+Popeye Mesen2 HD Pack <br>
+<br>
+
 
 Popeye Arcade Restore<br>
 Mesen2 HD Pack<br>
