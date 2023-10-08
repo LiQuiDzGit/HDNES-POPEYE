@@ -1,6 +1,6 @@
 
-h3 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+<h3> {
+	
 	font-size: 13px;
 	color: #6600FF;
 	text-align: center;
