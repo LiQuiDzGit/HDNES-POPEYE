@@ -8,8 +8,8 @@ By: LiQuiDz<br>
 Database match: Popeye (World) (Rev A)<br>
 File SHA-1: 53CA7541404E51C248D10FAB198154F9970479B9<br>
 File CRC32: FB1A91D0<br>
-<ver>107<br>
-<scale>4<br>
+[ver]107<br>
+[scale]4x<br>
 <supportedRom>53CA7541404E51C248D10FAB198154F9970479B9<br>
 <br>
   </h3> 
