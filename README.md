@@ -19,7 +19,7 @@ File CRC32: FB1A91D0<br>
 [scale]4x<br>
 <supportedRom>53CA7541404E51C248D10FAB198154F9970479B9<br>
 <br>
-  </<center>> 
+  </<center>
 <img src="http://liquidz.speedpost.net/OnlinePhoto/GitHub/HDNES-Popeye/Popeye1.jpg" align="center" alt="Popeye" border="0">
 
 <br>
