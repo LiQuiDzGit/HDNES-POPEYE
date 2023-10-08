@@ -12,18 +12,13 @@
 # File CRC32: FB1A91D0
 #
 #
-#
+#=======================================================
 <ver>107
 <scale>4
 <supportedRom>53CA7541404E51C248D10FAB198154F9970479B9
 <overscan>0,0,0,0
 <options>disableSpriteLimit
 <options>disableOriginalTiles
-#=======================================================
-########################################################
-#=======================================================
-# IMG MAP
-#-------------------------------------------------------
 <img>tile00.png
 <img>tile01.png
 <img>tile02.png
@@ -34,56 +29,30 @@
 <img>tile07.png
 <img>tile08.png
 <img>tile09.png
-#=======================================================
-# PRIORITY TILE/BACKGROUND/SPRITES
-#------------------------------------------------------
-#<condition>BG00,tileAtPosition,152,104,01E8,0C10300F
-#[BG00]<background>imgB00.png,1.0,0,20,0,0,0
-
-# Replace Sprite During Level 1 Startup($00F7=AC)
-
 <condition>LEV1STR,memoryCheckConstant,00F7,==,AC
 <condition>L1LOAD,memoryCheckConstant,00AD,==,05
 <condition>BG11,ppuMemoryCheckConstant,20A2,==,5D
-
-# Replace Popeye during Level 1 Start
-#[LEV1STR]<tile>1,0C,FF303612,448,96,1,N
-#[LEV1STR]<tile>1,0F,FF303612,480,96,1,N
-#[LEV1STR]<tile>1,0D,FF303612,448,128,1,N
-#[LEV1STR]<tile>1,10,FF303612,480,128,1,N
-#[LEV1STR]<tile>1,0E,FF303612,448,160,1,N
-#[LEV1STR]<tile>1,11,FF303612,480,160,1,N
-
-# Replace Olive during Level 1 Start
 [LEV1STR]<tile>1,B0,FF253707,0,0,1,N
 [LEV1STR]<tile>1,B3,FF253707,32,0,1,N
 [LEV1STR]<tile>1,B1,FF253707,0,32,1,N
 [LEV1STR]<tile>1,B4,FF253707,32,32,1,N
 [LEV1STR]<tile>1,B2,FF253707,0,64,1,N
 [LEV1STR]<tile>1,B5,FF253707,32,64,1,N
-
-# Replace Background during Level 1 Start
 [LEV1STR]<background>imgB10.png,1.0
-
-# Darken Text during Level 1 Start
-# PLAYER 1
 [LEV1STR]<tile>0,0126,0F1C3021,224,64,0.1,N
 [LEV1STR]<tile>0,0126,0F0C1008,224,64,0.1,N
 [L1LOAD&BG11]<tile>0,0126,0F1C3021,224,64,0.1,N
 [L1LOAD&BG11]<tile>0,0126,0F0C1008,224,64,0.1,N
-# PLAYER 2
 [LEV1STR]<tile>0,0127,0F1C3021,256,64,0.1,N
 [LEV1STR]<tile>0,0127,0F0C1008,256,64,0.1,N
 [L1LOAD&BG11]<tile>0,0127,0F1C3021,256,64,0.1,N
 [L1LOAD&BG11]<tile>0,0127,0F0C1008,256,64,0.1,N
-# TOP
 [LEV1STR]<tile>0,0128,0F1C3021,416,64,0.05,N
 [LEV1STR]<tile>0,0129,0F1C3021,448,64,0.05,N
 [LEV1STR]<tile>0,012A,0F1C3021,480,64,0.05,N
 [L1LOAD&BG11]<tile>0,0128,0F1C3021,416,64,0.05,N
 [L1LOAD&BG11]<tile>0,0129,0F1C3021,448,64,0.05,N
 [L1LOAD&BG11]<tile>0,012A,0F1C3021,480,64,0.05,N
-# 0-9
 [LEV1STR]<tile>0,0100,0F1C3021,0,0,0.05,N
 [LEV1STR]<tile>0,0101,0F1C3021,32,0,0.05,N
 [LEV1STR]<tile>0,0102,0F1C3021,64,0,0.05,N
@@ -94,7 +63,6 @@
 [LEV1STR]<tile>0,0107,0F1C3021,224,0,0.05,N
 [LEV1STR]<tile>0,0108,0F1C3021,256,0,0.05,N
 [LEV1STR]<tile>0,0109,0F1C3021,288,0,0.05,N
-# 0 - 9 
 [L1LOAD&BG11]<tile>0,0100,0F1C3021,0,0,0.05,N
 [L1LOAD&BG11]<tile>0,0101,0F1C3021,32,0,0.05,N
 [L1LOAD&BG11]<tile>0,0102,0F1C3021,64,0,0.05,N
@@ -105,11 +73,6 @@
 [L1LOAD&BG11]<tile>0,0107,0F1C3021,224,0,0.05,N
 [L1LOAD&BG11]<tile>0,0108,0F1C3021,256,0,0.05,N
 [L1LOAD&BG11]<tile>0,0109,0F1C3021,288,0,0.05,N
-
-#=======================================================
-# BACKGROUND - START SCREEN
-#------------------------------------------------------
-
 <condition>START-1AC1,spriteAtPosition,56,104,9F,FF273707
 <condition>START-1BC1,spriteAtPosition,56,120,9F,FF273707
 <condition>START-2AC1,spriteAtPosition,56,136,9F,FF273707
@@ -118,7 +81,6 @@
 [START-1BC1]<background>imgB02.png,1.0
 [START-2AC1]<background>imgB03.png,1.0
 [START-2BC1]<background>imgB04.png,1.0
-##
 <condition>START-1AC2,spriteAtPosition,56,104,9F,FF270002
 <condition>START-1BC2,spriteAtPosition,56,120,9F,FF270002
 <condition>START-2AC2,spriteAtPosition,56,136,9F,FF270002
@@ -127,7 +89,6 @@
 [START-1BC2]<background>imgB02.png,1.0
 [START-2AC2]<background>imgB03.png,1.0
 [START-2BC2]<background>imgB04.png,1.0
-##
 <condition>START-1AC3,spriteAtPosition,56,104,9F,FF273607
 <condition>START-1BC3,spriteAtPosition,56,120,9F,FF273607
 <condition>START-2AC3,spriteAtPosition,56,136,9F,FF273607
@@ -136,26 +97,17 @@
 [START-1BC3]<background>imgB02.png,1.0
 [START-2AC3]<background>imgB03.png,1.0
 [START-2BC3]<background>imgB04.png,1.0
-##
-
-#=======================================================
-# BACKGROUND - WORLD 1,2,3
-#------------------------------------------------------
-
 <condition>BG1a,tileAtPosition,232,48,01FB,0F301602
 <condition>BG1b,tileAtPosition,232,48,01F5,0F301602
 <condition>BG2a,tileAtPosition,232,48,01FB,0F14102A
 <condition>BG2b,tileAtPosition,232,48,01F5,0F14102A
-#<condition>BG11,ppuMemoryCheckConstant,20A2,==,5D---(moved up)
 <condition>BG21,tileAtPosition,16,192,01D6,0F011C2A
 <condition>BG22,tileAtPosition,16,192,01D8,0F011C2A
 <condition>BG23,tileAtPosition,16,184,01E1,0F011C2A
 <condition>BG2x,ppuMemoryCheckConstant,21EC,==,B7
-
-<condition>BG3X1,tileAtPosition,8,208,018B,0C17210F
-<condition>BG3X2,tileAtPosition,8,104,01A4,0C10300F
+<condition>BG3X1,tileAtPosition,48,72,124,0C101607
+<condition>BG3X2,tileAtPosition,136,96,174,0C101607
 [BG3X1&BG3X2]<background>imgB31.png,1.0,0,0,0,0,0
-
 [BG1a]<background>imgB12.png,1.0
 [BG1b]<background>imgB12.png,1.0
 [BG11]<background>imgB11.png,1.0
@@ -169,12 +121,6 @@
 [BG22]<background>imgB22.png,1.0
 [BG23]<background>imgB23.png,1.0
 [BG2x]<background>imgB21.png,1.0
-
-#=======================================================
-# TILE 00 - SPRITES/TILES REPLACEMENT - ALPHA/ICONS
-#------------------------------------------------------
-
-# remove tile (clear)
 <tile>0,0124,0F2A1707,384,64,1,N
 <tile>0,0124,0C10300F,384,64,1,N
 <tile>0,0124,0C101607,384,64,1,N
@@ -184,23 +130,14 @@
 <tile>0,0124,0C263607,384,64,1,N
 <tile>0,0124,0C17210F,384,64,1,N
 <tile>0,0124,0C0F1221,384,64,1,N
-##
-#remove * in start menu
 <tile>9,9F,FF270002,0,0,1,N
 <tile>9,9F,FF273707,0,0,1,N
-##
-
-# PLAYER 1
 <tile>0,0126,0F1C3021,224,64,1.4,N
 <tile>0,0126,0F0C1008,224,64,1,N
 <tile>0,0126,0C10300F,224,64,2.0,N
-# PLAYER 2
 <tile>0,0127,0F1C3021,256,64,1.4,N
 <tile>0,0127,0F0C1008,256,64,1,N
 <tile>0,0127,0C10300F,256,64,2.0,N
-
-# PLAYER 1-2 TURN
-
 <tile>0,0119,0F1C3021,288,32,1,N
 <tile>0,0115,0F1C3021,160,32,1,N
 <tile>0,010A,0F1C3021,318,0,1,N
@@ -209,7 +146,6 @@
 <tile>0,011B,0F1C3021,352,32,1,N
 <tile>0,01E7,0F1C3021,32,0,1,N
 <tile>0,01E8,0F1C3021,64,0,1,N
-#-
 <tile>0,0119,0C10300F,288,32,1,N
 <tile>0,0115,0C10300F,160,32,1,N
 <tile>0,010A,0C10300F,318,0,1,N
@@ -218,50 +154,34 @@
 <tile>0,011B,0C10300F,352,32,1,N
 <tile>0,01E7,0C10300F,32,0,1,N
 <tile>0,01E8,0C10300F,64,0,1,N
-#-
 <tile>0,0119,0F14102A,288,32,0.5,N
 <tile>0,0115,0F14102A,160,32,0.5,N
 <tile>0,010A,0F14102A,318,0,0.5,N
 <tile>0,0122,0F14102A,64,64,0.5,N
 <tile>0,010E,0F14102A,446,0,0.5,N
-#<tile>0,011B,0F14102A,352,32,0.5,N==R
 <tile>0,01E7,0F14102A,32,0,0.5,N
 <tile>0,01E8,0F14102A,64,0,0.5,N
-
-# GAME OVER
-
 <tile>0,0110,0F1C3021,0,32,1,N
 <tile>0,0116,0F1C3021,192,32,1,N
 <tile>0,0118,0F1C3021,256,32,1,N
 <tile>0,011F,0F1C3021,480,32,1,N
-
 <tile>0,0110,0C10300F,0,32,1,N
 <tile>0,0116,0C10300F,192,32,1,N
 <tile>0,0118,0C10300F,256,32,1,N
 <tile>0,011F,0C10300F,480,32,1,N
-
 <tile>0,0110,0F14102A,0,32,1,N
 <tile>0,0116,0F14102A,192,32,1,N
 <tile>0,0118,0F14102A,256,32,1,N
 <tile>0,011F,0F14102A,480,32,1,N
-
-
-# TOP
-#-w1
 <tile>0,0128,0F1C3021,416,64,1,N
 <tile>0,0129,0F1C3021,448,64,1,N
 <tile>0,012A,0F1C3021,480,64,1,N
-#-w2
 <tile>0,0128,0F0C1008,416,64,0.8,N
 <tile>0,0129,0F0C1008,448,64,0.8,N
 <tile>0,012A,0F0C1008,480,64,0.8,N
-#-w3
 <tile>0,0128,0C10300F,416,64,1,N
 <tile>0,0129,0C10300F,448,64,1,N
 <tile>0,012A,0C10300F,480,64,1,N
-##
-
-# 0-9
 <tile>0,0100,0F1C3021,0,0,1,N
 <tile>0,0101,0F1C3021,32,0,1,N
 <tile>0,0102,0F1C3021,64,0,1,N
@@ -272,7 +192,6 @@
 <tile>0,0107,0F1C3021,224,0,1,N
 <tile>0,0108,0F1C3021,256,0,1,N
 <tile>0,0109,0F1C3021,288,0,1,N
-#-
 <tile>0,0100,0F0C1008,0,0,0.5,N
 <tile>0,0101,0F0C1008,32,0,0.5,N
 <tile>0,0102,0F0C1008,64,0,0.5,N
@@ -283,7 +202,6 @@
 <tile>0,0107,0F0C1008,224,0,0.5,N
 <tile>0,0108,0F0C1008,256,0,0.5,N
 <tile>0,0109,0F0C1008,288,0,0.5,N
-#-
 <tile>0,0100,0C10300F,0,0,1,N
 <tile>0,0101,0C10300F,32,0,1,N
 <tile>0,0102,0C10300F,64,0,1,N
@@ -294,9 +212,6 @@
 <tile>0,0107,0C10300F,224,0,1,N
 <tile>0,0108,0C10300F,256,0,1,N
 <tile>0,0109,0C10300F,288,0,1,N
-##
-
-#0-9 RED
 <tile>2,0100,0F301602,0,0,0.8,N
 <tile>2,0101,0F301602,32,0,0.8,N
 <tile>2,0102,0F301602,64,0,0.8,N
@@ -307,87 +222,52 @@
 <tile>2,0107,0F301602,224,0,0.8,N
 <tile>2,0108,0F301602,256,0,0.8,N
 <tile>2,0109,0F301602,288,0,0.8,N
-#bonus red
 <tile>2,010B,0F301602,352,0,0.8,N
 <tile>2,0118,0F301602,256,32,0.8,N
 <tile>2,0117,0F301602,224,32,0.8,N
 <tile>2,011E,0F301602,448,32,0.8,N
 <tile>2,011C,0F301602,384,32,0.8,N
-#3000 red
 <tile>2,0103,0F1C1007,96,0,0.8,N
 <tile>2,0100,0F1C1007,0,0,0.8,N
-
-##
-
-
-#r  w-3
 <tile>0,01E0,0C101607,288,64,1,N
-#= w-3
 <tile>0,0125,0C10300F,318,64,1,N
-#= w-2
 <tile>0,0125,0F0C1008,318,64,0.5,N
-#R w-2
 <tile>0,011B,0F14102A,288,64,0.5,N
-##
-#R w-1
 <tile>2,01E0,0F301602,288,64,0.8,N
 <tile>2,0125,0F301602,318,64,0.8,N
-
-#
-popeye live logo
 <tile>0,37,FF303612,0,480,1,N
 <tile>0,37,FF302512,32,480,1,N
 <tile>0,37,FF30360F,0,480,1,N
 <tile>0,37,FF30250F,32,480,1,N
-
-
-#Skull
 <condition>sk1,frameRange,10,5
 <condition>sk2,frameRange,10,0
 [sk1]<tile>0,AA,FF303612,64,480,1,N
 [sk2]<tile>0,AA,FF303612,96,480,1,N
-#skull punch
 <tile>0,AB,FF303612,160,480,1,N
-##
-
-#Bottle
 <tile>0,A8,FF143617,192,480,1,N
 <tile>0,A8,FF273617,192,480,1,N
 <tile>0,A8,FF15360F,192,480,1,N
 <tile>0,A9,FF143617,224,480,1,N
 <tile>0,A9,FF273617,224,480,1,N
 <tile>0,A9,FF15360F,224,480,1,N
-
-#Water slash
-#<tile>0,A7,FF303612,256,480,1,N
-#<tile>0,A6,FF303612,288,480,1,N
-#<tile>0,A7,FF30360F,256,480,1,N
-#<tile>0,A6,FF30360F,288,480,1,N
-#<tile>0,A7,FF302512,256,480,1,N
-#<tile>0,A6,FF302512,288,480,1,N
-
-#PlutoBlack
 <tile>0,A6,FF30250F,352,480,1,N
 <tile>0,A7,FF30250F,352,480,1,N
 <addition>A6,FF30250F,-8,4,A1,FF000000
 <addition>A6,FF30250F,0,4,A2,FF000000
 <addition>A6,FF30250F,8,4,A3,FF000000
 <addition>A6,FF30250F,16,4,A4,FF000000
-#Pluto
 <tile>0,A6,FF302512,352,480,1,N
 <tile>0,A7,FF302512,352,480,1,N
 <addition>A6,FF302512,-8,4,A1,FF000000
 <addition>A6,FF302512,0,4,A2,FF000000
 <addition>A6,FF302512,8,4,A3,FF000000
 <addition>A6,FF302512,16,4,A4,FF000000
-#Pluto
 <tile>0,A6,FF30360F,352,480,1,N
 <tile>0,A7,FF30360F,352,480,1,N
 <addition>A6,FF30360F,-8,4,A1,FF000000
 <addition>A6,FF30360F,0,4,A2,FF000000
 <addition>A6,FF30360F,8,4,A3,FF000000
 <addition>A6,FF30360F,16,4,A4,FF000000
-## Popeye Splash
 <tile>0,A6,FF303612,352,480,1,Y
 <tile>0,A7,FF303612,352,480,1,Y
 <addition>A6,FF303612,-8,4,A1,FF000000
@@ -397,9 +277,6 @@ popeye live logo
 <condition>SPLASHa1,frameRange,10,5
 <condition>SPLASHa2,frameRange,10,0
 <condition>SPLASHx1,memoryCheckConstant,008B,==,01
-
-
-
 <condition>SPLASHp0,memoryCheckConstant,06BB,==,FF
 <condition>SPLASHp1,memoryCheckConstant,06BB,==,00
 <condition>SPLASHp2,memoryCheckConstant,06BB,==,01
@@ -412,22 +289,18 @@ popeye live logo
 <condition>SPLASHp9,memoryCheckConstant,06BB,==,08
 <condition>SPLASHpX,memoryCheckConstant,06BB,>=,09
 <condition>SPLASHpY,memoryCheckConstant,06BB,!=,FF
-
 [SPLASHp0&SPLASHa1]<tile>2,A1,FF000000,0,96,1,N
 [SPLASHp0&SPLASHa1]<tile>2,A2,FF000000,32,96,1,N
 [SPLASHp0&SPLASHa1]<tile>2,A3,FF000000,64,96,1,N
 [SPLASHp0&SPLASHa1]<tile>2,A4,FF000000,96,96,1,N
-
 [SPLASHp0&SPLASHa2]<tile>2,A1,FF000000,128,96,1,N
 [SPLASHp0&SPLASHa2]<tile>2,A2,FF000000,160,96,1,N
 [SPLASHp0&SPLASHa2]<tile>2,A3,FF000000,192,96,1,N
 [SPLASHp0&SPLASHa2]<tile>2,A4,FF000000,224,96,1,N
-
 [SPLASHp1]<tile>2,A1,FF000000,0,128,1,N
 [SPLASHp1]<tile>2,A2,FF000000,32,128,1,N
 [SPLASHp1]<tile>2,A3,FF000000,64,128,1,N
 [SPLASHp1]<tile>2,A4,FF000000,96,128,1,N
-
 [SPLASHp2]<tile>2,A1,FF000000,0,160,1,N
 [SPLASHp2]<tile>2,A2,FF000000,32,160,1,N
 [SPLASHp2]<tile>2,A3,FF000000,64,160,1,N
@@ -438,7 +311,6 @@ popeye live logo
 [SPLASHp2]<tile>1,1D,FF303612,160,224,0.9,N
 [SPLASHp2]<tile>1,1B,FF303612,128,256,0.9,N
 [SPLASHp2]<tile>1,1E,FF303612,160,256,0.9,N
-
 [SPLASHp3]<tile>2,A1,FF000000,0,192,1,N
 [SPLASHp3]<tile>2,A2,FF000000,32,192,1,N
 [SPLASHp3]<tile>2,A3,FF000000,64,192,1,N
@@ -449,7 +321,6 @@ popeye live logo
 [SPLASHp3]<tile>1,1D,FF303612,160,224,0.8,N
 [SPLASHp3]<tile>1,1B,FF303612,128,256,0.8,N
 [SPLASHp3]<tile>1,1E,FF303612,160,256,0.8,N
-
 [SPLASHp4]<tile>2,A1,FF000000,0,224,1,N
 [SPLASHp4]<tile>2,A2,FF000000,32,224,1,N
 [SPLASHp4]<tile>2,A3,FF000000,64,224,1,N
@@ -460,7 +331,6 @@ popeye live logo
 [SPLASHp4]<tile>1,1D,FF303612,160,224,0.7,N
 [SPLASHp4]<tile>1,1B,FF303612,128,256,0.7,N
 [SPLASHp4]<tile>1,1E,FF303612,160,256,0.7,N
-
 [SPLASHp5]<tile>2,A1,FF000000,0,256,1,N
 [SPLASHp5]<tile>2,A2,FF000000,32,256,1,N
 [SPLASHp5]<tile>2,A3,FF000000,64,256,1,N
@@ -471,7 +341,6 @@ popeye live logo
 [SPLASHp5]<tile>1,1D,FF303612,160,224,0.6,N
 [SPLASHp5]<tile>1,1B,FF303612,128,256,0.6,N
 [SPLASHp5]<tile>1,1E,FF303612,160,256,0.6,N
-
 [SPLASHp6]<tile>2,A1,FF000000,0,288,1,N
 [SPLASHp6]<tile>2,A2,FF000000,32,288,1,N
 [SPLASHp6]<tile>2,A3,FF000000,64,288,1,N
@@ -482,7 +351,6 @@ popeye live logo
 [SPLASHp6]<tile>1,1D,FF303612,160,224,0.5,N
 [SPLASHp6]<tile>1,1B,FF303612,128,256,0.5,N
 [SPLASHp6]<tile>1,1E,FF303612,160,256,0.5,N
-
 [SPLASHp7]<tile>2,A1,FF000000,0,320,1,N
 [SPLASHp7]<tile>2,A2,FF000000,32,320,1,N
 [SPLASHp7]<tile>2,A3,FF000000,64,320,1,N
@@ -493,7 +361,6 @@ popeye live logo
 [SPLASHp7]<tile>1,1D,FF303612,160,224,0.4,N
 [SPLASHp7]<tile>1,1B,FF303612,128,256,0.4,N
 [SPLASHp7]<tile>1,1E,FF303612,160,256,0.4,N
-
 [SPLASHp8]<tile>2,A1,FF000000,0,352,1,N
 [SPLASHp8]<tile>2,A2,FF000000,32,352,1,N
 [SPLASHp8]<tile>2,A3,FF000000,64,352,1,N
@@ -504,7 +371,6 @@ popeye live logo
 [SPLASHp8]<tile>1,1D,FF303612,160,224,0.3,N
 [SPLASHp8]<tile>1,1B,FF303612,128,256,0.3,N
 [SPLASHp8]<tile>1,1E,FF303612,160,256,0.3,N
-
 [SPLASHp9]<tile>2,A1,FF000000,0,384,1,N
 [SPLASHp9]<tile>2,A2,FF000000,32,384,1,N
 [SPLASHp9]<tile>2,A3,FF000000,64,384,1,N
@@ -515,35 +381,17 @@ popeye live logo
 [SPLASHp9]<tile>1,1D,FF303612,160,224,0.2,N
 [SPLASHp9]<tile>1,1B,FF303612,128,256,0.2,N
 [SPLASHp9]<tile>1,1E,FF303612,160,256,0.2,N
-
 [SPLASHpX]<tile>2,A1,FF000000,0,416,1,N
 [SPLASHpX]<tile>2,A2,FF000000,32,416,1,N
 [SPLASHpX]<tile>2,A3,FF000000,64,416,1,N
 [SPLASHpX]<tile>2,A4,FF000000,96,416,1,N
-
 [SPLASHpX&SPLASHx1&SPLASHpY]<tile>1,19,FF303612,128,192,0.1,N
 [SPLASHpX&SPLASHx1&SPLASHpY]<tile>1,1C,FF303612,160,192,0.1,N
 [SPLASHpX&SPLASHx1&SPLASHpY]<tile>1,1A,FF303612,128,224,0.1,N
 [SPLASHpX&SPLASHx1&SPLASHpY]<tile>1,1D,FF303612,160,224,0.1,N
 [SPLASHpX&SPLASHx1&SPLASHpY]<tile>1,1B,FF303612,128,256,0.1,N
 [SPLASHpX&SPLASHx1&SPLASHpY]<tile>1,1E,FF303612,160,256,0.1,N
-
-
-
-
-
-
-
-
-
-#########################################################SPINASH
-
-# Spinash
-#<tile>0,012D,0F2A1707,128,128,1,N
 <tile>0,01CC,0F011C2A,128,128,1,N
-#<tile>0,01CB,0C172A0F,128,128,1,N
-##
-
 <condition>SPI00,memoryCheckConstant,0045,>=,20
 <condition>SPI20,memoryCheckConstant,0045,==,01
 <condition>SPI19,memoryCheckConstant,0045,==,02
@@ -565,99 +413,54 @@ popeye live logo
 <condition>SPI03,memoryCheckConstant,0045,==,12
 <condition>SPI02,memoryCheckConstant,0045,==,13
 <condition>SPI01,memoryCheckConstant,0045,>=,14
-
 [SPI00]<tile>9,012D,0F2A1707,0,256,1,N
 [SPI00]<tile>9,01CB,0C172A0F,0,256,1,N
-
 [SPI01]<tile>0,012D,0F2A1707,0,256,1,N
 [SPI01]<tile>0,01CB,0C172A0F,0,256,1,N
-
 [SPI02]<tile>0,012D,0F2A1707,32,256,1,N
 [SPI02]<tile>0,01CB,0C172A0F,32,256,1,N
-
 [SPI03]<tile>0,012D,0F2A1707,64,256,1,N
 [SPI03]<tile>0,01CB,0C172A0F,64,256,1,N
-
 [SPI04]<tile>0,012D,0F2A1707,96,256,1,N
 [SPI04]<tile>0,01CB,0C172A0F,96,256,1,N
-
 [SPI05]<tile>0,012D,0F2A1707,128,256,1,N
 [SPI05]<tile>0,01CB,0C172A0F,128,256,1,N
-
 [SPI06]<tile>0,012D,0F2A1707,160,256,1,N
 [SPI06]<tile>0,01CB,0C172A0F,160,256,1,N
-
 [SPI07]<tile>0,012D,0F2A1707,192,256,1,N
 [SPI07]<tile>0,01CB,0C172A0F,192,256,1,N
-
 [SPI08]<tile>0,012D,0F2A1707,224,256,1,N
 [SPI08]<tile>0,01CB,0C172A0F,224,256,1,N
-
 [SPI09]<tile>0,012D,0F2A1707,256,256,1,N
 [SPI09]<tile>0,01CB,0C172A0F,256,256,1,N
-
 [SPI10]<tile>0,012D,0F2A1707,288,256,1,N
 [SPI10]<tile>0,01CB,0C172A0F,288,256,1,N
-
-
 [SPI11]<tile>0,012D,0F2A1707,0,288,1,N
 [SPI11]<tile>0,01CB,0C172A0F,0,288,1,N
-
 [SPI12]<tile>0,012D,0F2A1707,32,288,1,N
 [SPI12]<tile>0,01CB,0C172A0F,32,288,1,N
-
 [SPI13]<tile>0,012D,0F2A1707,64,288,1,N
 [SPI13]<tile>0,01CB,0C172A0F,64,288,1,N
-
 [SPI14]<tile>0,012D,0F2A1707,96,288,1,N
 [SPI14]<tile>0,01CB,0C172A0F,96,288,1,N
-
 [SPI15]<tile>0,012D,0F2A1707,128,288,1,N
 [SPI15]<tile>0,01CB,0C172A0F,128,288,1,N
-
 [SPI16]<tile>0,012D,0F2A1707,160,288,1,N
 [SPI16]<tile>0,01CB,0C172A0F,160,288,1,N
-
 [SPI17]<tile>0,012D,0F2A1707,192,288,1,N
 [SPI17]<tile>0,01CB,0C172A0F,192,288,1,N
-
 [SPI18]<tile>0,012D,0F2A1707,224,288,1,N
 [SPI18]<tile>0,01CB,0C172A0F,224,288,1,N
-
 [SPI19]<tile>0,012D,0F2A1707,256,288,1,N
 [SPI19]<tile>0,01CB,0C172A0F,256,288,1,N
-
 [SPI20]<tile>0,012D,0F2A1707,288,288,1,N
 [SPI20]<tile>0,01CB,0C172A0F,288,288,1,N
-
-
-
-
-
-
-
-
-
-
-
-
-
-########################################################################################
-
-
-
-#HELP (World3)
 <tile>0,A0,FF30360F,0,320,1,N
 <tile>0,A1,FF30360F,0,352,1,N
 <tile>0,A2,FF30360F,32,320,1,N
 <tile>0,A3,FF30360F,32,352,1,N
-
 <tile>0,A1,FF30250F,0,352,1,N
 <tile>0,A2,FF30250F,32,320,1,N
-
-
-#POINTS
-
 <tile>0,CE,FF30360F,224,384,1,N
 <tile>0,D2,FF30360F,288,384,1,N
 <tile>0,D4,FF30360F,320,384,1,N
@@ -666,7 +469,6 @@ popeye live logo
 <tile>0,D1,FF30360F,256,416,1,N
 <tile>0,D3,FF30360F,288,416,1,N
 <tile>0,D7,FF30360F,352,416,1,N
-
 <tile>0,CE,FF303612,224,384,1,N
 <tile>0,D2,FF303612,288,384,1,N
 <tile>0,D4,FF303612,320,384,1,N
@@ -675,7 +477,6 @@ popeye live logo
 <tile>0,D1,FF303612,256,416,1,N
 <tile>0,D3,FF302612,288,416,1,N
 <tile>0,D7,FF302612,352,416,1,N
-
 <tile>0,CE,FF302512,224,384,1,N
 <tile>0,D2,FF302512,288,384,1,N
 <tile>0,D4,FF302512,320,384,1,N
@@ -684,647 +485,403 @@ popeye live logo
 <tile>0,D1,FF302512,256,416,1,N
 <tile>0,D3,FF302512,288,416,1,N
 <tile>0,D7,FF302512,352,416,1,N
-
-#=======================================================
-# TILE - OLIVE/POPEYE/GYPSY - World 1,2,3
-#------------------------------------------------------
-
-# OLIVE 1 - World 1
 <tile>1,B6,FF253707,64,0,1,N
 <tile>1,B9,FF253707,96,0,1,N
 <tile>1,B7,FF253707,64,32,1,N
 <tile>1,BA,FF253707,96,32,1,N
 <tile>1,B8,FF253707,64,64,1,N
 <tile>1,BB,FF253707,96,64,1,N
-##
-
-# OLIVE 2 - World 1
 <tile>1,B0,FF253707,128,0,1,N
 <tile>1,B3,FF253707,160,0,1,N
 <tile>1,B1,FF253707,128,32,1,N
 <tile>1,B4,FF253707,160,32,1,N
 <tile>1,B2,FF253707,128,64,1,N
 <tile>1,B5,FF253707,160,64,1,N
-##
-
-# OLIVE 3 - World 1
 <tile>1,BC,FF253707,0,0,1,N
 <tile>1,BF,FF253707,32,0,1,N
 <tile>1,BD,FF253707,0,32,1,N
 <tile>1,C0,FF253707,32,32,1,N
 <tile>1,BE,FF253707,0,64,1,N
 <tile>1,C1,FF253707,32,64,1,N
-##
-
-# Olive 1 - World 2
 <tile>1,EE,FF253607,192,0,1,N
 <tile>1,F1,FF253607,224,0,1,N
 <tile>1,EF,FF253607,192,32,1,N
 <tile>1,F2,FF253607,224,32,1,N
 <tile>1,F0,FF253607,192,64,1,N
 <tile>1,F3,FF253607,224,64,1,N
-##
-
-# Olive 2 - World 2
 <tile>1,F4,FF253607,256,0,1,N
 <tile>1,F7,FF253607,288,0,1,N
 <tile>1,F5,FF253607,256,32,1,N
 <tile>1,F8,FF253607,288,32,1,N
 <tile>1,F6,FF253607,256,64,1,N
 <tile>1,F9,FF253607,288,64,1,N
-##
-
-#Olive 1 - World 3
 <tile>7,BC,FF263607,0,0,1,N
 <tile>7,BF,FF263607,32,0,1,N
 <tile>7,BD,FF263607,0,32,1,N
 <tile>7,C0,FF263607,32,32,1,N
 <tile>7,BE,FF263607,0,64,1,N
 <tile>7,C1,FF263607,32,64,1,N
-
-#Olive 2 - World 3
 <tile>7,B0,FF263607,64,0,1,N
 <tile>7,B3,FF263607,96,0,1,N
 <tile>7,B1,FF263607,64,32,1,N
 <tile>7,B4,FF263607,96,32,1,N
 <tile>7,B2,FF263607,64,64,1,N
 <tile>7,B5,FF263607,96,64,1,N
-##
-
-#Olive 3 - World 3
 <tile>7,C2,FF263607,128,0,1,N
 <tile>7,C5,FF263607,160,0,1,N
 <tile>7,C3,FF263607,128,32,1,N
 <tile>7,C6,FF263607,160,32,1,N
 <tile>7,C4,FF263607,128,64,1,N
 <tile>7,C7,FF263607,160,64,1,N
-##
-
-#Olive 4 - World 3
 <tile>7,C8,FF263607,0,320,1,N
 <tile>7,CA,FF263607,32,320,1,N
 <tile>7,CC,FF263607,64,320,1,N
-
 <tile>7,C9,FF263607,0,352,1,N
 <tile>7,CB,FF263607,32,352,1,N
 <tile>7,CD,FF263607,64,352,1,N
-
-# Popeye - 1
 <tile>1,0C,FF303612,0,96,1,N
 <tile>1,0F,FF303612,32,96,1,N
 <tile>1,0D,FF303612,0,128,1,N
 <tile>1,10,FF303612,32,128,1,N
 <tile>1,0E,FF303612,0,160,1,N
 <tile>1,11,FF303612,32,160,1,N
-##
-
-# Popeye - 2
 <tile>1,06,FF303612,64,96,1,N
 <tile>1,09,FF303612,96,96,1,N
 <tile>1,07,FF303612,64,128,1,N
 <tile>1,0A,FF303612,96,128,1,N
 <tile>1,08,FF303612,64,160,1,N
 <tile>1,0B,FF303612,96,160,1,N
-##
-
-# Popeye - 3
 <tile>1,00,FF303612,128,96,1,N
 <tile>1,03,FF303612,160,96,1,N
 <tile>1,01,FF303612,128,128,1,N
 <tile>1,04,FF303612,160,128,1,N
 <tile>1,02,FF303612,128,160,1,N
 <tile>1,05,FF303612,160,160,1,N
-##
-
-# Popeye - Stairs 1
 <tile>1,25,FF303612,192,96,1,N
 <tile>1,28,FF303612,224,96,1,N
 <tile>1,26,FF303612,192,128,1,N
 <tile>1,29,FF303612,224,128,1,N
 <tile>1,27,FF303612,192,160,1,N
 <tile>1,2A,FF303612,224,160,1,N
-##
-
-# Popeye - Stairs 2
 <tile>1,2B,FF303612,256,96,1,N
 <tile>1,2E,FF303612,288,96,1,N
 <tile>1,2C,FF303612,256,128,1,N
 <tile>1,2F,FF303612,288,128,1,N
 <tile>1,2D,FF303612,256,160,1,N
 <tile>1,30,FF303612,288,160,1,N
-##
-
-# Popeye - Ladder 
 <tile>1,31,FF303612,320,96,1,N
 <tile>1,34,FF303612,352,96,1,N
 <tile>1,32,FF303612,320,128,1,N
 <tile>1,35,FF303612,352,128,1,N
 <tile>1,33,FF303612,320,160,1,N
 <tile>1,36,FF303612,352,160,1,N
-##
-
-# Popeye - Air Punch
 <tile>1,1F,FF303612,384,96,1,N
 <tile>1,22,FF303612,416,96,1,N
 <tile>1,20,FF303612,384,128,1,N
 <tile>1,23,FF303612,416,128,1,N
 <tile>1,21,FF303612,384,160,1,N
 <tile>1,24,FF303612,416,160,1,N
-
-# Popeye - Dead (Spinning)
 <tile>1,19,FF303612,128,192,1,N
 <tile>1,1C,FF303612,160,192,1,N
 <tile>1,1A,FF303612,128,224,1,N
 <tile>1,1D,FF303612,160,224,1,N
 <tile>1,1B,FF303612,128,256,1,N
 <tile>1,1E,FF303612,160,256,1,N
-##
-
-# Popeye - Punch
 <tile>1,12,FF303612,0,192,1,N
 <tile>1,15,FF303612,32,192,1,N
-
 <tile>1,13,FF303612,0,224,1,N
 <tile>1,16,FF303612,32,224,1,N
 <tile>1,18,FF303612,64,224,1,N
-
 <tile>1,14,FF303612,0,256,1,N
 <tile>1,17,FF303612,32,256,1,N
-##
-
-# Popeye - 1 (World 3)
 <tile>7,0C,FF30360F,0,96,1,N
 <tile>7,0F,FF30360F,32,96,1,N
 <tile>7,0D,FF30360F,0,128,1,N
 <tile>7,10,FF30360F,32,128,1,N
 <tile>7,0E,FF30360F,0,160,1,N
 <tile>7,11,FF30360F,32,160,1,N
-##
-
-# Popeye - 2 (World 3)
 <tile>7,06,FF30360F,64,96,1,N
 <tile>7,09,FF30360F,96,96,1,N
 <tile>7,07,FF30360F,64,128,1,N
 <tile>7,0A,FF30360F,96,128,1,N
 <tile>7,08,FF30360F,64,160,1,N
 <tile>7,0B,FF30360F,96,160,1,N
-##
-
-# Popeye - 3 (World 3)
 <tile>7,00,FF30360F,128,96,1,N
 <tile>7,03,FF30360F,160,96,1,N
 <tile>7,01,FF30360F,128,128,1,N
 <tile>7,04,FF30360F,160,128,1,N
 <tile>7,02,FF30360F,128,160,1,N
 <tile>7,05,FF30360F,160,160,1,N
-##
-
-# Popeye - Stairs 1 (World 3)
 <tile>7,25,FF30360F,192,96,1,N
 <tile>7,28,FF30360F,224,96,1,N
 <tile>7,26,FF30360F,192,128,1,N
 <tile>7,29,FF30360F,224,128,1,N
 <tile>7,27,FF30360F,192,160,1,N
 <tile>7,2A,FF30360F,224,160,1,N
-##
-
-# Popeye - Stairs 2 (World 3)
 <tile>7,2B,FF30360F,256,96,1,N
 <tile>7,2E,FF30360F,288,96,1,N
 <tile>7,2C,FF30360F,256,128,1,N
 <tile>7,2F,FF30360F,288,128,1,N
 <tile>7,2D,FF30360F,256,160,1,N
 <tile>7,30,FF30360F,288,160,1,N
-##
-
-# Popeye - Ladder  (World 3)
 <tile>7,31,FF30360F,320,96,1,N
 <tile>7,34,FF30360F,352,96,1,N
 <tile>7,32,FF30360F,320,128,1,N
 <tile>7,35,FF30360F,352,128,1,N
 <tile>7,33,FF30360F,320,160,1,N
 <tile>7,36,FF30360F,352,160,1,N
-##
-# Popeye - Dead (Spinning) (World 3)
 <tile>7,19,FF30360F,128,192,1,N
 <tile>7,1C,FF30360F,160,192,1,N
 <tile>7,1A,FF30360F,128,224,1,N
 <tile>7,1D,FF30360F,160,224,1,N
 <tile>7,1B,FF30360F,128,256,1,N
 <tile>7,1E,FF30360F,160,256,1,N
-##
-
-# Popeye - Punch (World 3)
 <tile>7,12,FF30360F,0,192,1,N
 <tile>7,15,FF30360F,32,192,1,N
-
 <tile>7,13,FF30360F,0,224,1,N
 <tile>7,16,FF30360F,32,224,1,N
 <tile>7,18,FF30360F,64,224,1,N
-
 <tile>7,14,FF30360F,0,256,1,N
 <tile>7,17,FF30360F,32,256,1,N
-##
-
-# SPINASH POPEYE
-
-# Popeye - 1 (SPINASH)
 <tile>5,0C,FF302512,0,96,1,N
 <tile>5,0F,FF302512,32,96,1,N
 <tile>5,0D,FF302512,0,128,1,N
 <tile>5,10,FF302512,32,128,1,N
 <tile>5,0E,FF302512,0,160,1,N
 <tile>5,11,FF302512,32,160,1,N
-##
-
-# Popeye - 2 (SPINASH)
 <tile>5,06,FF302512,64,96,1,N
 <tile>5,09,FF302512,96,96,1,N
 <tile>5,07,FF302512,64,128,1,N
 <tile>5,0A,FF302512,96,128,1,N
 <tile>5,08,FF302512,64,160,1,N
 <tile>5,0B,FF302512,96,160,1,N
-##
-
-# Popeye - 3 (SPINASH)
 <tile>5,00,FF302512,128,96,1,N
 <tile>5,03,FF302512,160,96,1,N
 <tile>5,01,FF302512,128,128,1,N
 <tile>5,04,FF302512,160,128,1,N
 <tile>5,02,FF302512,128,160,1,N
 <tile>5,05,FF302512,160,160,1,N
-##
-
-# Popeye - Stairs 1 (SPINASH)
 <tile>5,25,FF302512,192,96,1,N
 <tile>5,28,FF302512,224,96,1,N
 <tile>5,26,FF302512,192,128,1,N
 <tile>5,29,FF302512,224,128,1,N
 <tile>5,27,FF302512,192,160,1,N
 <tile>5,2A,FF302512,224,160,1,N
-##
-
-# Popeye - Stairs 2 (SPINASH)
 <tile>5,2B,FF302512,256,96,1,N
 <tile>5,2E,FF302512,288,96,1,N
 <tile>5,2C,FF302512,256,128,1,N
 <tile>5,2F,FF302512,288,128,1,N
 <tile>5,2D,FF302512,256,160,1,N
 <tile>5,30,FF302512,288,160,1,N
-##
-
-# Popeye - Ladder (SPINASH)
 <tile>5,31,FF302512,320,96,1,N
 <tile>5,34,FF302512,352,96,1,N
 <tile>5,32,FF302512,320,128,1,N
 <tile>5,35,FF302512,352,128,1,N
 <tile>5,33,FF302512,320,160,1,N
 <tile>5,36,FF302512,352,160,1,N
-##
-
-# Popeye - Air Punch (SPINASH)
 <tile>5,1F,FF302512,384,96,1,N
 <tile>5,22,FF302512,416,96,1,N
 <tile>5,20,FF302512,384,128,1,N
 <tile>5,23,FF302512,416,128,1,N
 <tile>5,21,FF302512,384,160,1,N
 <tile>5,24,FF302512,416,160,1,N
-
-# Popeye - Dead (Spinning) (SPINASH)
 <tile>5,19,FF302512,128,192,1,N
 <tile>5,1C,FF302512,160,192,1,N
 <tile>5,1A,FF302512,128,224,1,N
 <tile>5,1D,FF302512,160,224,1,N
 <tile>5,1B,FF302512,128,256,1,N
 <tile>5,1E,FF302512,160,256,1,N
-##
-
-# Popeye - Punch (SPINASH)
 <tile>5,12,FF302512,0,192,1,N
 <tile>5,15,FF302512,32,192,1,N
-
 <tile>5,13,FF302512,0,224,1,N
 <tile>5,16,FF302512,32,224,1,N
 <tile>5,18,FF302512,64,224,1,N
-
 <tile>5,14,FF302512,0,256,1,N
 <tile>5,17,FF302512,32,256,1,N
-##
-
-# Popeye - 1 (World 3) (SPINASH)
 <tile>8,0C,FF30250F,0,96,1,N
 <tile>8,0F,FF30250F,32,96,1,N
 <tile>8,0D,FF30250F,0,128,1,N
 <tile>8,10,FF30250F,32,128,1,N
 <tile>8,0E,FF30250F,0,160,1,N
 <tile>8,11,FF30250F,32,160,1,N
-##
-
-# Popeye - 2 (World 3) (SPINASH)
 <tile>8,06,FF30250F,64,96,1,N
 <tile>8,09,FF30250F,96,96,1,N
 <tile>8,07,FF30250F,64,128,1,N
 <tile>8,0A,FF30250F,96,128,1,N
 <tile>8,08,FF30250F,64,160,1,N
 <tile>8,0B,FF30250F,96,160,1,N
-##
-
-# Popeye - 3 (World 3) (SPINASH)
 <tile>8,00,FF30250F,128,96,1,N
 <tile>8,03,FF30250F,160,96,1,N
 <tile>8,01,FF30250F,128,128,1,N
 <tile>8,04,FF30250F,160,128,1,N
 <tile>8,02,FF30250F,128,160,1,N
 <tile>8,05,FF30250F,160,160,1,N
-##
-
-# Popeye - Stairs 1 (World 3) (SPINASH)
 <tile>8,25,FF30250F,192,96,1,N
 <tile>8,28,FF30250F,224,96,1,N
 <tile>8,26,FF30250F,192,128,1,N
 <tile>8,29,FF30250F,224,128,1,N
 <tile>8,27,FF30250F,192,160,1,N
 <tile>8,2A,FF30250F,224,160,1,N
-##
-
-# Popeye - Stairs 2 (World 3) (SPINASH)
 <tile>8,2B,FF30250F,256,96,1,N
 <tile>8,2E,FF30250F,288,96,1,N
 <tile>8,2C,FF30250F,256,128,1,N
 <tile>8,2F,FF30250F,288,128,1,N
 <tile>8,2D,FF30250F,256,160,1,N
 <tile>8,30,FF30250F,288,160,1,N
-##
-
-# Popeye - Ladder  (World 3) (SPINASH)
 <tile>8,31,FF30250F,320,96,1,N
 <tile>8,34,FF30250F,352,96,1,N
 <tile>8,32,FF30250F,320,128,1,N
 <tile>8,35,FF30250F,352,128,1,N
 <tile>8,33,FF30250F,320,160,1,N
 <tile>8,36,FF30250F,352,160,1,N
-##
-# Popeye - Dead (Spinning) (World 3) (SPINASH)
 <tile>8,19,FF30250F,128,192,1,N
 <tile>8,1C,FF30250F,160,192,1,N
 <tile>8,1A,FF30250F,128,224,1,N
 <tile>8,1D,FF30250F,160,224,1,N
 <tile>8,1B,FF30250F,128,256,1,N
 <tile>8,1E,FF30250F,160,256,1,N
-##
-
-# Popeye - Air Punch (World 3) (SPINASH)
 <tile>8,1F,FF30250F,384,96,1,N
 <tile>8,22,FF30250F,416,96,1,N
 <tile>8,20,FF30250F,384,128,1,N
 <tile>8,23,FF30250F,416,128,1,N
 <tile>8,21,FF30250F,384,160,1,N
 <tile>8,24,FF30250F,416,160,1,N
-
-
-# Popeye - Punch (World 3) (SPINASH)
 <tile>8,12,FF30250F,0,192,1,N
 <tile>8,15,FF30250F,32,192,1,N
-
 <tile>8,13,FF30250F,0,224,1,N
 <tile>8,16,FF30250F,32,224,1,N
 <tile>8,18,FF30250F,64,224,1,N
-
 <tile>8,14,FF30250F,0,256,1,N
 <tile>8,17,FF30250F,32,256,1,N
-##
-
-# GYPSY 1
 <tile>1,01F0,0F301602,384,192,1,N
 <tile>1,01F3,0F301602,416,192,1,N
 <tile>1,01F1,0F301602,384,224,1,N
 <tile>1,01F4,0F301602,416,224,1,N
 <tile>1,01F2,0F301602,384,256,1,N
 <tile>1,01F5,0F301602,416,256,1,N
-##
-
-# GYPSY 2
 <tile>1,01F6,0F301602,448,192,1,N
 <tile>1,01F9,0F301602,480,192,1,N
 <tile>1,01F7,0F301602,448,224,1,N
 <tile>1,01FA,0F301602,480,224,1,N
 <tile>1,01F8,0F301602,448,256,1,N
 <tile>1,01FB,0F301602,480,256,1,N
-
-
-# GYPSY 1 w2
 <tile>1,01F0,0F14102A,384,192,1,N
 <tile>1,01F3,0F14102A,416,192,1,N
 <tile>1,01F1,0F14102A,384,224,1,N
 <tile>1,01F4,0F14102A,416,224,1,N
 <tile>1,01F2,0F14102A,384,256,1,N
 <tile>1,01F5,0F14102A,416,256,1,N
-##
-
-# GYPSY 2 w2
 <tile>1,01F6,0F14102A,448,192,1,N
 <tile>1,01F9,0F14102A,480,192,1,N
 <tile>1,01F7,0F14102A,448,224,1,N
 <tile>1,01FA,0F14102A,480,224,1,N
 <tile>1,01F8,0F14102A,448,256,1,N
 <tile>1,01FB,0F14102A,480,256,1,N
-
-#=======================================================
-# TILE 00 - SPRITES/TILES REPLACEMENT
-#------------------------------------------------------
-
-# WORLD - 1
-
-# Arrow LEFT
 <tile>0,0156,0F1C3021,0,192,1,N
 <tile>0,0157,0F1C3021,32,192,1,N
 <tile>0,0153,0F1C3021,0,224,1,N
 <tile>0,0154,0F1C3021,32,224,1,N
-##
-
-#Arrow Right
 <tile>0,0148,0F1C3021,64,192,1,N
 <tile>0,0149,0F1C3021,96,192,1,N
 <tile>0,0144,0F1C3021,64,224,1,N
 <tile>0,0145,0F1C3021,96,224,1,N
-##
-
-# brige between house (no longuer used)
-#<tile>0,0152,0F2A1707,160,128,1,N
-##
-
-#extend brige (no longuer used)
-#<tile>0,0152,0F301602,160,128,1,N
-##
-
-# walk on line
 <tile>0,013C,0F1C1007,192,160,1,N
-##
-
-# house cube
 <tile>0,0158,0F301602,448,128,1,N
-# house cube heart
 <tile>0,0159,0F301602,480,128,1,N
-# stage completion heart
 <tile>0,01EA,0F301602,480,128,1,N
-
-
-# Punch Bag
 <tile>0,A4,FF303612,320,128,1,N
 <tile>0,A5,FF303612,320,160,1,N
 <tile>0,A4,FF302512,320,128,1,N
 <tile>0,A5,FF302512,320,160,1,N
-##
-
-# bucket
 <tile>0,DA,FF143617,32,128,1,N
 <tile>0,D8,FF143617,0,128,1,N
 <tile>0,DB,FF143617,32,160,1,N
 <tile>0,D9,FF143617,0,160,1,N
-##
-
-
-## HEART - WORLD 1
-# heart (side)
 <tile>0,47,FF253707,64,160,1,N
-# heart (up)
 <tile>0,46,FF253707,96,160,1,N
-# heart (45deg)
 <tile>0,48,FF253707,128,160,1,N
-# heart (bottom white/black)
 <tile>0,46,FF303612,160,160,1,N
-# heart (split in half)
 <tile>0,49,FF253707,224,128,1,N
 <tile>0,4A,FF253707,224,160,1,N
-
-## WORLD - 2
-# MUSIC NOTE - World 2
-# Falling
 <tile>0,9C,FF253607,256,128,0.9,N
 <tile>0,9C,FF303612,256,160,2.0,N
-#
 <tile>0,01A5,0F14102A,256,160,1.1,N
 <tile>0,01A6,0F14102A,288,160,1.1,N
 <tile>0,01DB,0F14102A,256,128,0.8,N
 <tile>0,01DC,0F14102A,288,128,0.8,N
-# BROKEN
 <tile>0,44,FF253607,192,128,0.9,N
-##
-
-
-#=======================================================
-# TILE 03 - SPRITES/TILES REPLACEMENT - PLUTO World 1
-#------------------------------------------------------
-
-# Pluto - World 1 - Knees
 <tile>3,90,FF143617,0,416,1,N
 <tile>3,93,FF143617,32,416,1,N
 <tile>3,91,FF143617,0,448,1,N
 <tile>3,94,FF143617,32,448,1,N
 <tile>3,92,FF143617,0,480,1,N
 <tile>3,95,FF143617,32,480,1,N
-##
-
-# Pluto - Look Back (World 1)
 <tile>3,81,FF143617,0,0,1,N
 <tile>3,84,FF143617,32,0,1,N
 <tile>3,82,FF143617,0,32,1,N
 <tile>3,85,FF143617,32,32,1,N
 <tile>3,83,FF143617,0,64,1,N
 <tile>3,86,FF143617,32,64,1,N
-##
-
-# Pluto - Walk 1 (World 1)
 <tile>3,51,FF143617,64,0,1,N
 <tile>3,54,FF143617,96,0,1,N
 <tile>3,52,FF143617,64,32,1,N
 <tile>3,55,FF143617,96,32,1,N
 <tile>3,53,FF143617,64,64,1,N
 <tile>3,56,FF143617,96,64,1,N
-##
-
-# Pluto - Walk 2 (World 1)
 <tile>3,57,FF143617,128,0,1,N
 <tile>3,5A,FF143617,160,0,1,N
 <tile>3,58,FF143617,128,32,1,N
 <tile>3,5B,FF143617,160,32,1,N
 <tile>3,59,FF143617,128,64,1,N
 <tile>3,5C,FF143617,160,64,1,N
-##
-
-# Pluto - Walk 3 (World 1)
 <tile>3,4B,FF143617,192,0,1,N
 <tile>3,4E,FF143617,224,0,1,N
 <tile>3,4C,FF143617,192,32,1,N
 <tile>3,4F,FF143617,224,32,1,N
 <tile>3,4D,FF143617,192,64,1,N
 <tile>3,50,FF143617,224,64,1,N
-##
-
-# Pluto - Look up 1 (World 1)
 <tile>3,5D,FF143617,256,0,1,N
 <tile>3,60,FF143617,288,0,1,N
 <tile>3,5E,FF143617,256,32,1,N
 <tile>3,61,FF143617,288,32,1,N
 <tile>3,5F,FF143617,256,64,1,N
 <tile>3,62,FF143617,288,64,1,N
-##
-
-# Pluto - Look Up 2 (World 1)
 <tile>3,63,FF143617,320,0,1,N
 <tile>3,66,FF143617,352,0,1,N
 <tile>3,64,FF143617,320,32,1,N
 <tile>3,67,FF143617,352,32,1,N
 <tile>3,65,FF143617,320,64,1,N
 <tile>3,68,FF143617,352,64,1,N
-##
-
-# Pluto - Look Up Punch (World 1)
 <tile>3,6F,FF143617,384,0,1,N
 <tile>3,72,FF143617,416,0,1,N
 <tile>3,70,FF143617,384,32,1,N
 <tile>3,73,FF143617,416,32,1,N
 <tile>3,71,FF143617,384,64,1,N
 <tile>3,74,FF143617,416,64,1,N
-##
-
-# Pluto - Jump Down (World 1)
 <tile>3,69,FF143617,0,96,1,N
 <tile>3,6C,FF143617,32,96,1,N
 <tile>3,6A,FF143617,0,128,1,N
 <tile>3,6D,FF143617,32,128,1,N
 <tile>3,6B,FF143617,0,160,1,N
 <tile>3,6E,FF143617,32,160,1,N
-##
-
-# Pluto - Grab Down 1 (World 1)
 <tile>3,75,FF143617,64,96,1,N
 <tile>3,78,FF143617,96,96,1,N
 <tile>3,76,FF143617,64,128,1,N
 <tile>3,79,FF143617,96,128,1,N
 <tile>3,77,FF143617,64,160,1,N
 <tile>3,7A,FF143617,96,160,1,N
-##
-
-# Pluto - Grab Down 2 (World 1)
 <tile>3,7B,FF143617,128,96,1,N
 <tile>3,7E,FF143617,160,96,1,N
 <tile>3,7C,FF143617,128,128,1,N
 <tile>3,7F,FF143617,160,128,1,N
 <tile>3,7D,FF143617,128,160,1,N
 <tile>3,80,FF143617,160,160,1,N
-##
-
-# Pluto - Trow (World 1)
 <tile>3,96,FF143617,192,96,1,N
 <tile>3,99,FF143617,224,96,1,N
 <tile>3,97,FF143617,192,128,1,N
 <tile>3,9A,FF143617,224,128,1,N
 <tile>3,98,FF143617,192,160,1,N
 <tile>3,9B,FF143617,224,160,1,N
-##
-
-# Pluto - Dead (Spinning)
 <tile>3,87,FF143617,416,96,1,N
 <tile>3,8A,FF143617,448,96,1,N
 <tile>3,8D,FF143617,480,96,1,N
@@ -1334,155 +891,102 @@ popeye live logo
 <tile>3,89,FF143617,416,160,1,N
 <tile>3,8C,FF143617,448,160,1,N
 <tile>3,8F,FF143617,480,160,1,N
-
-#=======================================================
-# TILE 04 - SPRITES/TILES REPLACEMENT - PLUTO World 2
-#------------------------------------------------------
-
-# Floting baby
 <tile>4,38,FF262228,0,384,1,N
 <tile>4,3A,FF262228,32,384,1,N
 <tile>4,3C,FF262228,64,384,1,N
-
 <tile>4,39,FF262228,0,416,1,N
 <tile>4,3B,FF262228,32,416,1,N
 <tile>4,3D,FF262228,64,416,1,N
-
 <tile>4,3E,FF303612,0,448,1,N
 <tile>4,40,FF303612,32,448,1,N
 <tile>4,42,FF303612,64,448,1,N
-
 <tile>4,3F,FF303612,0,480,1,N
 <tile>4,41,FF303612,32,480,1,N
 <tile>4,43,FF303612,64,480,1,N
-
-# Floting baby Spinash
 <tile>4,38,FF302512,0,384,1,N
 <tile>4,3A,FF302512,32,384,1,N
 <tile>4,3C,FF302512,64,384,1,N
-
 <tile>4,39,FF302512,0,416,1,N
 <tile>4,3B,FF302512,32,416,1,N
 <tile>4,3D,FF302512,64,416,1,N
-
 <tile>4,3E,FF302512,0,448,1,N
 <tile>4,40,FF302512,32,448,1,N
 <tile>4,42,FF302512,64,448,1,N
-
 <tile>4,3F,FF302512,0,480,1,N
 <tile>4,41,FF302512,32,480,1,N
 <tile>4,43,FF302512,64,480,1,N
-##
-
-# Pluto - World 2 - Knees
 <tile>4,90,FF273617,0,416,1,N
 <tile>4,93,FF273617,32,416,1,N
 <tile>4,91,FF273617,0,448,1,N
 <tile>4,94,FF273617,32,448,1,N
 <tile>4,92,FF273617,0,480,1,N
 <tile>4,95,FF273617,32,480,1,N
-##
-
-# Pluto - Look Back (World 2)
 <tile>4,81,FF273617,0,0,1,N
 <tile>4,84,FF273617,32,0,1,N
 <tile>4,82,FF273617,0,32,1,N
 <tile>4,85,FF273617,32,32,1,N
 <tile>4,83,FF273617,0,64,1,N
 <tile>4,86,FF273617,32,64,1,N
-##
-
-# Pluto - Walk 1 (World 2)
 <tile>4,51,FF273617,64,0,1,N
 <tile>4,54,FF273617,96,0,1,N
 <tile>4,52,FF273617,64,32,1,N
 <tile>4,55,FF273617,96,32,1,N
 <tile>4,53,FF273617,64,64,1,N
 <tile>4,56,FF273617,96,64,1,N
-##
-
-# Pluto - Walk 2 (World 2)
 <tile>4,57,FF273617,128,0,1,N
 <tile>4,5A,FF273617,160,0,1,N
 <tile>4,58,FF273617,128,32,1,N
 <tile>4,5B,FF273617,160,32,1,N
 <tile>4,59,FF273617,128,64,1,N
 <tile>4,5C,FF273617,160,64,1,N
-##
-
-# Pluto - Walk 3 (World 2)
 <tile>4,4B,FF273617,192,0,1,N
 <tile>4,4E,FF273617,224,0,1,N
 <tile>4,4C,FF273617,192,32,1,N
 <tile>4,4F,FF273617,224,32,1,N
 <tile>4,4D,FF273617,192,64,1,N
 <tile>4,50,FF273617,224,64,1,N
-##
-
-# Pluto - Look up 1 (World 2)
 <tile>4,5D,FF273617,256,0,1,N
 <tile>4,60,FF273617,288,0,1,N
 <tile>4,5E,FF273617,256,32,1,N
 <tile>4,61,FF273617,288,32,1,N
 <tile>4,5F,FF273617,256,64,1,N
 <tile>4,62,FF273617,288,64,1,N
-##
-
-# Pluto - Look Up 2 (World 2)
 <tile>4,63,FF273617,320,0,1,N
 <tile>4,66,FF273617,352,0,1,N
 <tile>4,64,FF273617,320,32,1,N
 <tile>4,67,FF273617,352,32,1,N
 <tile>4,65,FF273617,320,64,1,N
 <tile>4,68,FF273617,352,64,1,N
-##
-
-# Pluto - Look Up Punch (World 2)
 <tile>4,6F,FF273617,384,0,1,N
 <tile>4,72,FF273617,416,0,1,N
 <tile>4,70,FF273617,384,32,1,N
 <tile>4,73,FF273617,416,32,1,N
 <tile>4,71,FF273617,384,64,1,N
 <tile>4,74,FF273617,416,64,1,N
-##
-
-# Pluto - Jump Down (World 2)
 <tile>4,69,FF273617,0,96,1,N
 <tile>4,6C,FF273617,32,96,1,N
 <tile>4,6A,FF273617,0,128,1,N
 <tile>4,6D,FF273617,32,128,1,N
 <tile>4,6B,FF273617,0,160,1,N
 <tile>4,6E,FF273617,32,160,1,N
-##
-
-# Pluto - Grab Down 1 (World 2)
 <tile>4,75,FF273617,64,96,1,N
 <tile>4,78,FF273617,96,96,1,N
 <tile>4,76,FF273617,64,128,1,N
 <tile>4,79,FF273617,96,128,1,N
 <tile>4,77,FF273617,64,160,1,N
 <tile>4,7A,FF273617,96,160,1,N
-##
-
-# Pluto - Grab Down 2 (World 2)
 <tile>4,7B,FF273617,128,96,1,N
 <tile>4,7E,FF273617,160,96,1,N
 <tile>4,7C,FF273617,128,128,1,N
 <tile>4,7F,FF273617,160,128,1,N
 <tile>4,7D,FF273617,128,160,1,N
 <tile>4,80,FF273617,160,160,1,N
-##
-
-# Pluto - Trow (World 2)
 <tile>4,96,FF273617,192,96,1,N
 <tile>4,99,FF273617,224,96,1,N
 <tile>4,97,FF273617,192,128,1,N
 <tile>4,9A,FF273617,224,128,1,N
 <tile>4,98,FF273617,192,160,1,N
 <tile>4,9B,FF273617,224,160,1,N
-##
-
-# Pluto - Dead (Spinning)
 <tile>4,87,FF273617,416,96,1,N
 <tile>4,8A,FF273617,448,96,1,N
 <tile>4,8D,FF273617,480,96,1,N
@@ -1492,120 +996,81 @@ popeye live logo
 <tile>4,89,FF273617,416,160,1,N
 <tile>4,8C,FF273617,448,160,1,N
 <tile>4,8F,FF273617,480,160,1,N
-
-#=======================================================
-# TILE 06 - SPRITES/TILES REPLACEMENT - PLUTO World 3
-#------------------------------------------------------
-
-# Pluto - World 3 - Knees
+<tile>0,1B0,0C101607,0,384,1,N
+<tile>0,1B1,0C101607,32,384,1,N
 <tile>6,90,FF15360F,0,416,1,N
 <tile>6,93,FF15360F,32,416,1,N
 <tile>6,91,FF15360F,0,448,1,N
 <tile>6,94,FF15360F,32,448,1,N
 <tile>6,92,FF15360F,0,480,1,N
 <tile>6,95,FF15360F,32,480,1,N
-##
-
-# Pluto - Look Back (World 3)
 <tile>6,81,FF15360F,0,0,1,N
 <tile>6,84,FF15360F,32,0,1,N
 <tile>6,82,FF15360F,0,32,1,N
 <tile>6,85,FF15360F,32,32,1,N
 <tile>6,83,FF15360F,0,64,1,N
 <tile>6,86,FF15360F,32,64,1,N
-##
-
-# Pluto - Walk 1 (World 3)
 <tile>6,51,FF15360F,64,0,1,N
 <tile>6,54,FF15360F,96,0,1,N
 <tile>6,52,FF15360F,64,32,1,N
 <tile>6,55,FF15360F,96,32,1,N
 <tile>6,53,FF15360F,64,64,1,N
 <tile>6,56,FF15360F,96,64,1,N
-##
-
-# Pluto - Walk 2 (World 3)
 <tile>6,57,FF15360F,128,0,1,N
 <tile>6,5A,FF15360F,160,0,1,N
 <tile>6,58,FF15360F,128,32,1,N
 <tile>6,5B,FF15360F,160,32,1,N
 <tile>6,59,FF15360F,128,64,1,N
 <tile>6,5C,FF15360F,160,64,1,N
-##
-
-# Pluto - Walk 3 (World 3)
 <tile>6,4B,FF15360F,192,0,1,N
 <tile>6,4E,FF15360F,224,0,1,N
 <tile>6,4C,FF15360F,192,32,1,N
 <tile>6,4F,FF15360F,224,32,1,N
 <tile>6,4D,FF15360F,192,64,1,N
 <tile>6,50,FF15360F,224,64,1,N
-##
-
-# Pluto - Look up 1 (World 3)
 <tile>6,5D,FF15360F,256,0,1,N
 <tile>6,60,FF15360F,288,0,1,N
 <tile>6,5E,FF15360F,256,32,1,N
 <tile>6,61,FF15360F,288,32,1,N
 <tile>6,5F,FF15360F,256,64,1,N
 <tile>6,62,FF15360F,288,64,1,N
-##
 
-# Pluto - Look Up 2 (World 3)
 <tile>6,63,FF15360F,320,0,1,N
 <tile>6,66,FF15360F,352,0,1,N
 <tile>6,64,FF15360F,320,32,1,N
 <tile>6,67,FF15360F,352,32,1,N
 <tile>6,65,FF15360F,320,64,1,N
 <tile>6,68,FF15360F,352,64,1,N
-##
-
-# Pluto - Look Up Punch (World 3)
 <tile>6,6F,FF15360F,384,0,1,N
 <tile>6,72,FF15360F,416,0,1,N
 <tile>6,70,FF15360F,384,32,1,N
 <tile>6,73,FF15360F,416,32,1,N
 <tile>6,71,FF15360F,384,64,1,N
 <tile>6,74,FF15360F,416,64,1,N
-##
-
-# Pluto - Jump Down (World 3)
 <tile>6,69,FF15360F,0,96,1,N
 <tile>6,6C,FF15360F,32,96,1,N
 <tile>6,6A,FF15360F,0,128,1,N
 <tile>6,6D,FF15360F,32,128,1,N
 <tile>6,6B,FF15360F,0,160,1,N
 <tile>6,6E,FF15360F,32,160,1,N
-##
-
-# Pluto - Grab Down 1 (World 3)
 <tile>6,75,FF15360F,64,96,1,N
 <tile>6,78,FF15360F,96,96,1,N
 <tile>6,76,FF15360F,64,128,1,N
 <tile>6,79,FF15360F,96,128,1,N
 <tile>6,77,FF15360F,64,160,1,N
 <tile>6,7A,FF15360F,96,160,1,N
-##
-
-# Pluto - Grab Down 2 (World 3)
 <tile>6,7B,FF15360F,128,96,1,N
 <tile>6,7E,FF15360F,160,96,1,N
 <tile>6,7C,FF15360F,128,128,1,N
 <tile>6,7F,FF15360F,160,128,1,N
 <tile>6,7D,FF15360F,128,160,1,N
 <tile>6,80,FF15360F,160,160,1,N
-##
-
-# Pluto - Trow (World 3)
 <tile>6,96,FF15360F,192,96,1,N
 <tile>6,99,FF15360F,224,96,1,N
 <tile>6,97,FF15360F,192,128,1,N
 <tile>6,9A,FF15360F,224,128,1,N
 <tile>6,98,FF15360F,192,160,1,N
 <tile>6,9B,FF15360F,224,160,1,N
-##
-
-# Pluto - Dead (Spinning)
 <tile>6,87,FF15360F,416,96,1,N
 <tile>6,8A,FF15360F,448,96,1,N
 <tile>6,8D,FF15360F,480,96,1,N
@@ -1615,63 +1080,41 @@ popeye live logo
 <tile>6,89,FF15360F,416,160,1,N
 <tile>6,8C,FF15360F,448,160,1,N
 <tile>6,8F,FF15360F,480,160,1,N
-##
-
-##### WORLD 3
-#Bird 1 - World 3
 <tile>7,DC,FF30360F,0,384,1,N
 <tile>7,DE,FF30360F,32,384,1,N
 <tile>7,E0,FF30360F,64,384,1,N
-
 <tile>7,DD,FF30360F,0,416,1,N
 <tile>7,DF,FF30360F,32,416,1,N
 <tile>7,E1,FF30360F,64,416,1,N
-##
-#Bird 2 - World 3
 <tile>7,E8,FF30360F,96,384,1,N
 <tile>7,EA,FF30360F,128,384,1,N
 <tile>7,EC,FF30360F,160,384,1,N
-
 <tile>7,E9,FF30360F,96,416,1,N
 <tile>7,EB,FF30360F,128,416,1,N
 <tile>7,ED,FF30360F,160,416,1,N
-
-#bird 3 smash
 <tile>7,FA,FF30360F,192,384,1,N
 <tile>7,FC,FF30360F,224,384,1,N
 <tile>7,FE,FF30360F,256,384,1,N
-
 <tile>7,FB,FF30360F,192,416,1,N
 <tile>7,FD,FF30360F,224,416,1,N
 <tile>7,FF,FF30360F,256,416,1,N
-
-###SPINASH
-#Bird 1 - World 3
 <tile>7,DC,FF30250F,0,384,1,N
 <tile>7,DE,FF30250F,32,384,1,N
 <tile>7,E0,FF30250F,64,384,1,N
-
 <tile>7,DD,FF30250F,0,416,1,N
 <tile>7,DF,FF30250F,32,416,1,N
 <tile>7,E1,FF30250F,64,416,1,N
-##
-#Bird 2 - World 3
 <tile>7,E8,FF30250F,96,384,1,N
 <tile>7,EA,FF30250F,128,384,1,N
 <tile>7,EC,FF30250F,160,384,1,N
-
 <tile>7,E9,FF30250F,96,416,1,N
 <tile>7,EB,FF30250F,128,416,1,N
 <tile>7,ED,FF30250F,160,416,1,N
-
-#bird 3 smash
 <tile>7,FA,FF30250F,192,384,1,N
 <tile>7,FC,FF30250F,224,384,1,N
 <tile>7,FE,FF30250F,256,384,1,N
-
 <tile>7,FB,FF30250F,192,416,1,N
 <tile>7,FD,FF30250F,224,416,1,N
 <tile>7,FF,FF30250F,256,416,1,N
+#
 
-
-####################################################################
