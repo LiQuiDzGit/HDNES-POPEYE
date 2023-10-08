@@ -15,9 +15,8 @@ By: LiQuiDz<br>
 Database match: Popeye (World) (Rev A)<br>
 File SHA-1: 53CA7541404E51C248D10FAB198154F9970479B9<br>
 File CRC32: FB1A91D0<br>
-[ver]107<br>
-[scale]4x<br>
-<supportedRom>53CA7541404E51C248D10FAB198154F9970479B9<br>
+[ver]107 / [scale]4x<br>
+
 <br>
   </<center>
 <img src="http://liquidz.speedpost.net/OnlinePhoto/GitHub/HDNES-Popeye/Popeye1.jpg" align="center" alt="Popeye" border="0">
