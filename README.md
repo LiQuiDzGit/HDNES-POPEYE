@@ -1,13 +1,8 @@
-<h3 align="center">
-
-
-
-
 
 Popeye Mesen2 HD Pack <br>
-<br></h3>
+<br>
 
-<center>
+
 Popeye Arcade Restore<br>
 Mesen2 HD Pack<br>
 By: LiQuiDz<br>
@@ -18,7 +13,7 @@ File CRC32: FB1A91D0<br>
 [ver]107 / [scale]4x<br>
 
 <br>
-  </<center>
+
 <img src="http://liquidz.speedpost.net/OnlinePhoto/GitHub/HDNES-Popeye/Popeye1.jpg" align="center" alt="Popeye" border="0">
 
 <br>
