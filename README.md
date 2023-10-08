@@ -1,4 +1,4 @@
-<h3 align="center"; font-size="13px";>
+<h3 align="center">
 
 
 
@@ -7,7 +7,7 @@
 Popeye Mesen2 HD Pack <br>
 <br></h3>
 
-
+<h3 align="center">
 Popeye Arcade Restore<br>
 Mesen2 HD Pack<br>
 By: LiQuiDz<br>
