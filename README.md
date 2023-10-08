@@ -1,10 +1,8 @@
+<h3 align="center"; font-size="13px";>
 
-<h3> {
-	
-	font-size: 13px;
-	color: #6600FF;
-	text-align: center;
-}
+
+
+
 
 Popeye Mesen2 HD Pack <br>
 <br>
